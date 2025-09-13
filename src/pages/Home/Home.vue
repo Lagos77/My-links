@@ -1,7 +1,9 @@
 <template>
   <main class="home">
     <h1 class="title">Welcome</h1>
-    <CircleImage src="/peluchin.jpg" />
+    <CircleImage src="/dksonicx.png" />
+    <h2 class="home-body-social-links">Cash</h2>
+    <CashBox image="/revolut-logo.svg" text="@misterhousecat"/>
     <h2 class="home-body-social-links">Community</h2>
     <CommunityButton
       text="Mega Fans"
@@ -17,7 +19,7 @@
     </div>
     <h2 class="home-body-news">News</h2>
     <div class="news-container">
-      <TextBox text="DKC2 Tournament: TBA" backgroundImage="/dk2-cover.jpg" />
+      <TextBox text="DKC2 Tournament: TBA" backgroundImage="/dk2-cover.jpg"/>
     </div>
   </main>
 </template>
@@ -27,6 +29,7 @@ import CircleImage from "../../components/CircleImage.vue";
 import CommunityButton from "../../components/CommunityButton.vue";
 import BaseButton from "../../components/BaseButton.vue";
 import TextBox from "../../components/TextBox.vue";
+import CashBox from "../../components/CashBox.vue";
 </script>
 
 <style scoped>
@@ -71,5 +74,6 @@ import TextBox from "../../components/TextBox.vue";
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
+  padding-bottom: 3.5rem;
 }
 </style>
