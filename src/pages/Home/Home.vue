@@ -3,7 +3,11 @@
     <h1 class="title">Welcome</h1>
     <CircleImage src="/dksonicx.png" />
     <h2 class="home-body-social-links">Cash</h2>
-    <CashBox image="/revolut-logo.svg" text="@misterhousecat"/>
+    <div class="cash-container">
+      <CashBox image="/revolut-logo.svg" text="@misterhousecat"/>
+      <CashBox image="/paypal-logo.svg" text="@misterhousecat"/>
+    </div>
+
     <h2 class="home-body-social-links">Community</h2>
     <CommunityButton
       text="Mega Fans"
@@ -19,7 +23,7 @@
     </div>
     <h2 class="home-body-news">News</h2>
     <div class="news-container">
-      <TextBox text="DKC2 Tournament: TBA" backgroundImage="/dk2-cover.jpg"/>
+      <TextBox text="DKC2 (DK Only): TBA" backgroundImage="/dk2-cover.jpg"/>
     </div>
   </main>
 </template>
@@ -45,7 +49,19 @@ import CashBox from "../../components/CashBox.vue";
   align-items: center;
   min-height: 100vh;
 
-  background: linear-gradient(to bottom, #0993f6, #000f3e);
+  background: 
+  linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.9)),
+  url("/home-wallpaper.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.cash-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
 }
 
 .home-body-social-links {
@@ -59,7 +75,7 @@ import CashBox from "../../components/CashBox.vue";
   width: 100%;
   flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 .home-body-news {
