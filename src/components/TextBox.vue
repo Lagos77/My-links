@@ -7,15 +7,34 @@
   >
     <div class="text-content">
       {{ text }}
+      <span
+        v-if="percentage !== undefined"
+        :style="{ color: percentageColor }"
+        class="percentage"
+      >
+        {{ percentage }}%
+      </span>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-defineProps<{
+import { computed } from "vue";
+const props = defineProps<{
   text: string;
+  percentage?: number;
   backgroundImage?: string;
 }>();
+
+const percentageColor = computed(() => {
+  const p = props.percentage;
+  if (p === undefined) return "white";
+  if (p === 100) return "limegreen";
+  if (p === 0) return "lightgray";
+  if (p < 50) return "deepskyblue";
+  if (p < 99) return "yellow";
+  return "white";
+});
 </script>
 
 <style scoped>
@@ -40,16 +59,27 @@ defineProps<{
   box-shadow: 12px 6px 2px rgba(0, 0, 0, 1);
 }
 
+.percentage {
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
+    1px 1px 0 black;
+}
+
 .text-box::before {
   content: "";
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.4);
   z-index: 0;
 }
 
 .text-content {
   position: relative;
   z-index: 1;
+}
+
+@media (min-width: 730px) {
+  .text-box {
+    width: 25%;
+  }
 }
 </style>

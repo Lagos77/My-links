@@ -12,7 +12,7 @@ defineProps<{
 
 <style scoped>
 .circle-wrapper {
-  width: 12rem;
+  width: 5rem;
   border-radius: 50%;
   overflow: hidden;
   border: 2px solid black;
@@ -22,6 +22,7 @@ defineProps<{
   justify-content: center;
   align-items: center;
   background-color: white;
+  margin-bottom: 2rem;
   box-shadow: 6px 6px 30px rgba(0, 0, 0, 1);
 }
 
@@ -30,5 +31,11 @@ defineProps<{
   height: 100%;
   object-fit: cover;
   display: block;
+}
+
+@media (min-width: 730px) {
+  .circle-wrapper {
+    width: 10rem;
+  }
 }
 </style>

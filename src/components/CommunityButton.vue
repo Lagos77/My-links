@@ -78,4 +78,11 @@ defineProps<{
   position: relative;
   z-index: 1;
 }
+
+@media (min-width: 730px) {
+  .text-box {
+    width: 25%;
+  }
+}
+
 </style>
