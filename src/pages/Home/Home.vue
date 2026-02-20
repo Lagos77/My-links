@@ -1,6 +1,6 @@
 <template>
   <DefaultLayout title="Welcome">
-    <CircleImage src="/avatar.png" />
+    <CircleImage src="/avatar.jpg" />
 
     <NavButton to="/mods" label="Mods" />
 
@@ -9,7 +9,7 @@
     <h2 class="home-body-social-links">Community</h2>
     <CommunityButton
       text="Mega Fans"
-      backgroundImage="/mega-man.webp"
+      backgroundImage="/mega-man.jpg"
       url="https://chat.whatsapp.com/FyD0OoS9StoCOdmjmP96Fp"
       icon="/whatsapp-icon.webp"
     />

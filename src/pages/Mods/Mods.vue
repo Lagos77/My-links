@@ -4,12 +4,12 @@
       <TextBox
         text="DKC2 (DK Only):"
         :percentage="75"
-        backgroundImage="/dkc2-only-dk.png"
+        backgroundImage="/dkc2-only-dk.jpg"
       />
       <TextBox
         text="Rockman & Forte:"
         :percentage="0"
-        backgroundImage="/r&f.png"
+        backgroundImage="/r&f.jpg"
       />
     </div>
   </DefaultLayout>
